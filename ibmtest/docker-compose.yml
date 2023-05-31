@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  mysql-db:
+    container_name: mysql-db
+    image: mysql:5.7
+    ports:
+      - $MYSQLDB_LOCAL_PORT:$MYSQLDB_DOCKER_PORT
+    environment:
+      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+    volumes:
+      - ./initdb:/docker-entrypoint-initdb.d
+
+volumes:
+  db:
