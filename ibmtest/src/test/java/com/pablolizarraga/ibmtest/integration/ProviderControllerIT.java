@@ -1,8 +1,6 @@
 package com.pablolizarraga.ibmtest.integration;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pablolizarraga.ibmtest.controller.ProviderController;
-import com.pablolizarraga.ibmtest.repository.ProviderRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -20,9 +18,6 @@ public class ProviderControllerIT {
 
     @Autowired
     private MockMvc mockMvc;
-
-    @Autowired
-    private ProviderRepository providerRepository;
 
     @Test
     public void givenExistingClientId_whenGetByClientId_thenReturnProvidersList() throws Exception {
