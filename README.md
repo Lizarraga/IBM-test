@@ -3,23 +3,31 @@
 ## Puesta en marcha
 Para probar la aplicación se deben seguir los siguientes pasos:
 
-1. Levantar la BD de MySQL
-Sobre la raiz del proyecto levantar el contenedor de la BD utilizando
+1. Levantar la BD de MySQL.
+
+Renombrar el fichero env.sample a .env para que el docker-compose.yml pueda obtener las variables.
+
+*La forma correcta sería hacer uso de los secrets de GitHub para que el valor de las variables se mantuviese oculto. Sin embargo por temas de simplicidad y dado que no estamos guardando realmente ningún tipo de información confidencial, en este caso, estas variables pueden ser públicas.*
+
+Sobre la raiz del proyecto levantar el contenedor de la BD utilizando:
 ```
 docker compose up -d
 ```
 
-2. Ejecutar el jar de la aplicación
-El proyecto utiliza Java 17 por lo que debemos configurar el proyecto para que utilice el JDK correspondiente
+2. Ejecutar el jar de la aplicación.
+
+El proyecto utiliza Java 17 por lo que debemos configurarlo para que utilice el JDK correspondiente.
 
 ![image](https://github.com/Lizarraga/IBM-test/assets/9576198/e9519327-160b-455f-bc6e-af9caa69a2a6)
 
-Ejecutar la clase principal IbmtestApplication
+Ejecutar la clase principal IbmtestApplication.
 
 ![image](https://github.com/Lizarraga/IBM-test/assets/9576198/454960aa-3d30-43b7-9f19-a93f50378cd5)
 
-3. Llamar al endpoint
-Importar la colección de la raiz del repositorio: IBM test.postman_collection.json
+3. Llamar al endpoint.
+
+Importar la colección de la raiz del repositorio: IBM test.postman_collection.json.
+
 Realizar la petición GET indicando el id del cliente en la URL
 
 ![image](https://github.com/Lizarraga/IBM-test/assets/9576198/30049fbb-3cb3-4e60-b920-c0b7bc89dcbb)
