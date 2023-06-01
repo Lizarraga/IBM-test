@@ -14,6 +14,8 @@ Sobre la raiz del proyecto levantar el contenedor de la BD utilizando:
 docker compose up -d
 ```
 
+*La base de datos se rellena automáticamente al crearse el contenedor y ejecutarse el entrypoint del docker-compose.yml*
+
 2. Ejecutar el jar de la aplicación.
 
 El proyecto utiliza Java 17 por lo que debemos configurarlo para que utilice el JDK correspondiente.
