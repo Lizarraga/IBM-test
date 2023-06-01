@@ -11,6 +11,3 @@ services:
       - MYSQL_DATABASE=$MYSQLDB_DATABASE
     volumes:
       - ./initdb:/docker-entrypoint-initdb.d
-
-volumes:
-  db:
